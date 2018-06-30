@@ -921,6 +921,10 @@
             container.remove();
             replacer.remove();
             spectrums[spect.id] = null;
+            
+            $(doc).off("keydown.spectrum", onkeydown);
+            $(doc).off("click.spectrum", clickout);
+            $(window).off("resize.spectrum", resize);
         }
 
         function option(optionName, optionValue) {
